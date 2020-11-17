@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BXP SOFTWARE</title>
+    </head>
+
+    <body>
+        <h1>FULL STACK DEVELOPER EXAM</h1>
+        <script> 
+		document.write("2.2 - 500 Element Array");
+document.write(z);
+document.write("Answers:");
+document.write(z);
+var array = []; //defining empty array
+var artib_elm; //arbitary element
+function elem_array(array_len) {
+	//To loop over and adding the random element to the empty array.
+	for(i = 1; i <= array_len; i++) {
+		array.push(Math.round(Math.random()* array_len));
+		//using push method for adding the current element in the loop
+		//Math.random gives the random element between 0 and 1 so it has to be multiplied by length of the array for accurate value.
+		//Math.round module is used to round the floating value of Math.random
+	};
+	document.write(array);
+	document.write("<br>");
+	var index = Math.floor(Math.random()* array_len);
+	artib_elm = array[index]; //loading the deleting arbitory element
+	array.splice(index, 1); //deleting the element by splice method.
+	
+	document.write("The index of the Arbitrary element is:", index);
+	document.write("<br>");
+	document.write("The arbitrary element is:", artib_elm);
+	document.write("<br>");
+	document.write("The current element at deleted index of Array is:", array[index]);
+	document.write("<br>");
+	document.write("The current length of Array after deleting arbitary element:", array.length);	
+};
+
+elem_array(500);
+</script>
+    </body>
+</html>

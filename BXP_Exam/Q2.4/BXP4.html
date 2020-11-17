@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BXP SOFTWARE</title>
+    </head>
+
+    <body>
+        <h1>FULL STACK DEVELOPER EXAM</h1>
+        <script> 
+		var date = new Date(); //To get todays date
+
+//var user_year = Number(prompt("Enter the year in (1996) format:"));
+//var user_month = Number(prompt("Enter the month in (11) format:"));
+//var user_day = Number(prompt("Enter the day in 3 format"));
+
+//date.setFullYear(user_year, user_month, user_day);
+
+var day = date.getDay(); //To get the Week-day
+//var day = user_day;
+
+//var date_milliseconds = Date.parse(date.toDateString());
+//console.log(date_milliseconds);
+
+var time = date.getHours(); //To get the hours
+
+/* 
+The above  module of day gives output as integer(0-6) as follows:
+0- Sunday, 1- Monday, 2- Tuesday, 3- Wednesday, 4- Thursday, 5- Friday, 6- Saturday
+
+The above module of time gives output as integer(0-23) as follows:
+0- 12AM, 1- 1AM, 2- 2AM,........12- 12PM, 13- 1PM, 14- 2PM, 15- 3PM, 16- 4PM, .......20- 8PM, 21- 9PM..23-11PM. 
+*/
+
+function IN_lottery() {
+    document.write("Today's Date  - ", date.toDateString());
+	document.write("</br>");
+	
+	if (day === 3 || day === 6) {
+		if(time === 20){
+			prompt("Enter 'OK' to draw your - Irish National Lotery");
+		} else{
+			document.write("Sorry!, The Draw is at 8PM-today");
+			document.write("</br>");
+		}
+	} else{
+		document.write("Sorry!, The next draw was on every Wednesday or Saturday at 8PM");
+		document.write("</br>");
+		switch(day) {
+				case 1: 
+				day === 0;
+				document.write("Time for Next draw: 3 Days ");
+				document.write("</br>");
+				break;
+				case 2: 
+				day === 1;
+				document.write("Time for Next draw: 2 Days");
+				document.write("</br>");
+				break;
+				case 3: 
+				day === 2;
+				document.write("Time for Next draw: 1 Day");
+				document.write("</br>");
+				break;
+				case 4:
+				day === 4;
+				document.write("Time for Next draw: 2 Days");
+				document.write("</br>");
+				break;
+				case 5:
+				day === 5;
+				document.write("Time for Next draw: 1 Day");
+				document.write("</br>");
+				break;
+				
+		};
+	};
+	
+};
+	
+IN_lottery();
+</script>
+    </body>
+</html>
